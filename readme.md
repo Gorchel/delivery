@@ -44,20 +44,20 @@ HomeController
 
 Каждый шаблон должен содержать основной каркас:
 
-<!--  @extends('layouts.main') -->
+@extends('layouts.main')
 
-<!--  @section('css') -->
-<!--     @parent -->
+@section('css')
+    @parent
     
-<!--     //Добавлять css тут -->
-<!--  @overwrite -->
+    <!-- Добавлять css тут -->
+@overwrite
 
-<!--  @section('js') -->
-<!--      @parent -->
+@section('js')
+    @parent
     
-<!--     //Добавлять js тут -->
-<!--  @overwrite -->
+    <!-- Добавлять js тут -->
+@overwrite
 
-<!--  @section("content") -->
-<!-- 	// Тут добавляем контент -->
-<!--  @overwrite -->
+@section("content")
+	<!-- Тут добавляем контент -->
+@overwrite
