@@ -26,6 +26,10 @@ http://localhost:8000/admin/
 
 ##Рекомендации по работе
 
+Для задачи создаем новую ветку от master и сливаем только в нее
+
+Все блоки делаем на bootstrap и проверяем для всех размеров
+
 Основный шаблон /layouts/main
 В него добавлять только общие для всех страниц js и css файлы (jQuery, Bootstrap и т д)
 
@@ -40,20 +44,20 @@ HomeController
 
 Каждый шаблон должен содержать основной каркас:
 
-@extends('layouts.main')
+<!--  @extends('layouts.main') -->
 
-@section('css')
-    @parent
+<!--  @section('css') -->
+<!--     @parent -->
     
-    <!-- Добавлять css тут -->
-@overwrite
+<!--     //Добавлять css тут -->
+<!--  @overwrite -->
 
-@section('js')
-    @parent
+<!--  @section('js') -->
+<!--      @parent -->
     
-    <!-- Добавлять js тут -->
-@overwrite
+<!--     //Добавлять js тут -->
+<!--  @overwrite -->
 
-@section("content")
-	<!-- Тут добавляем контент -->
-@overwrite
+<!--  @section("content") -->
+<!-- 	// Тут добавляем контент -->
+<!--  @overwrite -->
