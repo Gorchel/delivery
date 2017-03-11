@@ -336,7 +336,15 @@
                 "docblock",
                 "parser"
             ],
+<<<<<<< HEAD
             "time": "2017-02-24 16:22:25"
+=======
+<<<<<<< HEAD
+            "time": "2017-02-24 16:22:25"
+=======
+            "time": "2017-02-24T16:22:25+00:00"
+>>>>>>> 01802b4e3f69e96f02da2e79340dbb6761cf7be8
+>>>>>>> 61982338ddc2058978feb98cd4d6a36b30576682
         },
         {
             "name": "doctrine/cache",
@@ -473,7 +481,15 @@
                 "collections",
                 "iterator"
             ],
+<<<<<<< HEAD
             "time": "2017-01-03 10:49:41"
+=======
+<<<<<<< HEAD
+            "time": "2017-01-03 10:49:41"
+=======
+            "time": "2017-01-03T10:49:41+00:00"
+>>>>>>> 01802b4e3f69e96f02da2e79340dbb6761cf7be8
+>>>>>>> 61982338ddc2058978feb98cd4d6a36b30576682
         },
         {
             "name": "doctrine/common",
@@ -546,7 +562,15 @@
                 "persistence",
                 "spl"
             ],
+<<<<<<< HEAD
             "time": "2017-01-13 14:02:13"
+=======
+<<<<<<< HEAD
+            "time": "2017-01-13 14:02:13"
+=======
+            "time": "2017-01-13T14:02:13+00:00"
+>>>>>>> 01802b4e3f69e96f02da2e79340dbb6761cf7be8
+>>>>>>> 61982338ddc2058978feb98cd4d6a36b30576682
         },
         {
             "name": "doctrine/dbal",
@@ -1250,12 +1274,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelRUS/SleepingOwlAdmin.git",
+<<<<<<< HEAD
                 "reference": "f2d21671a19cbc85d82d96e0a5811bece79b5362"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/LaravelRUS/SleepingOwlAdmin/zipball/f2d21671a19cbc85d82d96e0a5811bece79b5362",
                 "reference": "f2d21671a19cbc85d82d96e0a5811bece79b5362",
+=======
+                "reference": "274a82b7f81beb10b90a7735e80a4f64ee8e6111"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelRUS/SleepingOwlAdmin/zipball/274a82b7f81beb10b90a7735e80a4f64ee8e6111",
+                "reference": "274a82b7f81beb10b90a7735e80a4f64ee8e6111",
+>>>>>>> 61982338ddc2058978feb98cd4d6a36b30576682
                 "shasum": ""
             },
             "require": {
@@ -1308,7 +1341,15 @@
                 "crud",
                 "laravel"
             ],
+<<<<<<< HEAD
             "time": "2017-03-11 14:20:19"
+=======
+<<<<<<< HEAD
+            "time": "2017-03-11 08:08:00"
+=======
+            "time": "2017-03-11T08:08:00+00:00"
+>>>>>>> 01802b4e3f69e96f02da2e79340dbb6761cf7be8
+>>>>>>> 61982338ddc2058978feb98cd4d6a36b30576682
         },
         {
             "name": "league/flysystem",
@@ -2015,7 +2056,15 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2017-02-21 09:12:04"
+=======
+<<<<<<< HEAD
+            "time": "2017-02-21 09:12:04"
+=======
+            "time": "2017-02-21T09:12:04+00:00"
+>>>>>>> 01802b4e3f69e96f02da2e79340dbb6761cf7be8
+>>>>>>> 61982338ddc2058978feb98cd4d6a36b30576682
         },
         {
             "name": "symfony/finder",
@@ -4002,7 +4051,15 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2017-03-07 16:47:02"
+=======
+<<<<<<< HEAD
+            "time": "2017-03-07 16:47:02"
+=======
+            "time": "2017-03-07T16:47:02+00:00"
+>>>>>>> 01802b4e3f69e96f02da2e79340dbb6761cf7be8
+>>>>>>> 61982338ddc2058978feb98cd4d6a36b30576682
         },
         {
             "name": "webmozart/assert",
