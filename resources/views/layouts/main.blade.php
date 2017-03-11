@@ -9,9 +9,13 @@
     @show
 </head>
 <body>
+	@include('layouts.header')
+
 	@section("content")
 
     @show
+
+	@include('layouts.footer')
 
 	@section('js')
     	@yield('js')

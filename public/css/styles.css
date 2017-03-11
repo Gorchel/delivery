@@ -1,0 +1,30 @@
+.nav {
+	width: 100%;
+	text-align: center;	
+}
+
+.nav_logo {
+	text-align: center;
+}
+
+.nav-korzina{
+	margin-top: 10px;
+	height: 40px;
+	width: 100%;
+}
+
+.korzina {
+	text-align: right;
+}
+
+#logo {
+	width: 150px;
+}
+
+#nav-logo{
+	width: 80px;
+}
+
+.slider{
+	max-width: 800px;
+}
