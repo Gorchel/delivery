@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('order_client_address')->nullable()->comment="Адрес клиента";
             $table->string('order_client_phone')->nullable()->comment="Телефон клиента";
             $table->string('order_comment')->nullable()->comment="Комментарий к заказу";
+            $table->boolean('order_is_active')->default(true)->comment="Комментарий к заказу";
             $table->timestamps();
         });
 
