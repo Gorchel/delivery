@@ -19,3 +19,7 @@ Route::resource('categorie','CategorieController');
 //Admin routes
 
 Route::get('/admin_panel', ['uses' => 'AdminController@index' ] );
+
+//Orders
+Route::get('/admin/users', ['uses' => 'UserController@index' ] );
+

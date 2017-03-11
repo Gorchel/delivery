@@ -280,8 +280,9 @@
     </div>
     <!-- /.navbar-static-side -->
 </nav>
-
-@section("content")
+<div id="page-wrapper" style="min-height: 592px;">           
+    @section("content")
+</div>
 
 @show
 
