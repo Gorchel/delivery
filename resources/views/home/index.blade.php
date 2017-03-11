@@ -15,6 +15,7 @@
 
 @section("content")
 <!--Navigation-->
+	</br>
 	<nav id="menu" class="default navbar navbar-default" role="navigation">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -43,7 +44,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div id="navig" class="collapse navbar-collapse" aria-expanded="false">
 				<ul class="nav navbar-nav">
-					<li class="active col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="#">Link</a></li>
+					<li class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="#">Link</a></li>
 					<li class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="#">Link</a></li>
 					<li class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="#">Link</a></li>
 					<li class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="#">Link</a></li>
@@ -54,7 +55,7 @@
 		</div>
 	</nav>
 
-    </br>
+
 	<div class="container">
 	    <div class="content">
 	    	<div class="slider hidden-xs hidden-sm">
