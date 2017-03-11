@@ -1123,12 +1123,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelRUS/SleepingOwlAdmin.git",
-                "reference": "269d3c1f72ae0b74def636fe5d84e4064e630b41"
+                "reference": "274a82b7f81beb10b90a7735e80a4f64ee8e6111"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LaravelRUS/SleepingOwlAdmin/zipball/269d3c1f72ae0b74def636fe5d84e4064e630b41",
-                "reference": "269d3c1f72ae0b74def636fe5d84e4064e630b41",
+                "url": "https://api.github.com/repos/LaravelRUS/SleepingOwlAdmin/zipball/274a82b7f81beb10b90a7735e80a4f64ee8e6111",
+                "reference": "274a82b7f81beb10b90a7735e80a4f64ee8e6111",
                 "shasum": ""
             },
             "require": {
@@ -1181,7 +1181,7 @@
                 "crud",
                 "laravel"
             ],
-            "time": "2017-03-08 03:47:51"
+            "time": "2017-03-11 08:08:00"
         },
         {
             "name": "league/flysystem",
@@ -1832,7 +1832,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.2.5",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -3824,7 +3824,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.2.5",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",

@@ -3,7 +3,7 @@
 @section('css')
     @parent
     <!-- Добавлять css тут -->
-    <link href="/css/styles.css" type="text/css" rel="stylesheet">
+
 
 @overwrite
 
