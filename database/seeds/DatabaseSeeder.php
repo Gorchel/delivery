@@ -69,5 +69,31 @@ class DatabaseSeeder extends Seeder
             $good->good_categorie_id = $value['good_categorie_id'];
             $good->save();
         }
+
+        foreach (Order::all() as $value) {
+            $value->delete();
+        }
+
+        $order_array = [
+            ['order_id' => 1, 'order_amount' => '1233' , 'order_client_name' => 'Oleg', 'order_client_phone' => '+79787676543','order_client_address' => 'Sevastopol','order_comment' => 'lorem ipsum','good' => [1,4,5]],
+            ['order_id' => 2, 'order_amount' => '233' , 'order_client_name' => 'Vasia', 'order_client_phone' => '+79787676543','order_client_address' => 'Sevastopol','order_comment' => 'lorem ipsum','good' => [2,5,8]],
+            ['order_id' => 3, 'order_amount' => '444' , 'order_client_name' => 'Serega', 'order_client_phone' => '+79787676543','order_client_address' => 'Sevastopol','order_comment' => 'lorem ipsum','good' => [4,11,9]],
+            ['order_id' => 4, 'order_amount' => '551' , 'order_client_name' => 'Fedor', 'order_client_phone' => '+79787676543','order_client_address' => 'Sevastopol','order_comment' => 'lorem ipsum','good' => [2,6,10]],
+            ['order_id' => 5, 'order_amount' => '2000' , 'order_client_name' => 'Vasil', 'order_client_phone' => '+79787676543','order_client_address' => 'Sevastopol','order_comment' => 'lorem ipsum','good' => [1,11]],
+            ['order_id' => 6, 'order_amount' => '1500' , 'order_client_name' => 'Alex', 'order_client_phone' => '+79787676543','order_client_address' => 'Sevastopol','order_comment' => 'lorem ipsum','good' => [3,4,10]],
+        ];
+
+        foreach ($order_array as $value) {
+            $order = new Order;
+            $order->order_id = $value['order_id'];
+            $order->order_amount = $value['order_amount'];
+            $order->order_client_name = $value['order_client_name'];
+            $order->order_client_phone = $value['order_client_phone'];
+            $order->order_client_address = $value['order_client_address'];
+            $order->order_comment = $value['order_comment'];
+            $order->save();
+
+            $order->goods()->attach($value['good']);
+        }
     }
 }
