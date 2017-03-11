@@ -17,4 +17,9 @@ class Good extends Model
     {
         return $this->belongsToMany('App\Good','orders_to_goods','order_id','good_id');
     }
+
+    public function files()
+    {
+        return $this->morphMany('App\File', 'item');
+    }
 }

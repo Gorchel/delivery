@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Categorie;
 use App\Good;
 use App\Order;
+use App\File;
 
 class DatabaseSeeder extends Seeder
 {
@@ -94,6 +95,33 @@ class DatabaseSeeder extends Seeder
             $order->save();
 
             $order->goods()->attach($value['good']);
+        }
+
+        foreach (File::all() as $value) {
+            $value->delete();
+        }
+
+        $file_array = [
+            ['file_id' => 1, 'item_id' => 1, 'item_type' => 'good', 'file_url' => '/images/test/p1.jpg'],
+            ['file_id' => 2, 'item_id' => 2, 'item_type' => 'good', 'file_url' => '/images/test/p2.jpg'],
+            ['file_id' => 3, 'item_id' => 3, 'item_type' => 'good', 'file_url' => '/images/test/p3.jpg'],
+            ['file_id' => 4, 'item_id' => 4, 'item_type' => 'good', 'file_url' => '/images/test/s1.jpg'],
+            ['file_id' => 5, 'item_id' => 5, 'item_type' => 'good', 'file_url' => '/images/test/s2.jpg'],
+            ['file_id' => 6, 'item_id' => 6, 'item_type' => 'good', 'file_url' => '/images/test/s3.jpg'],
+            ['file_id' => 7, 'item_id' => 7, 'item_type' => 'good', 'file_url' => '/images/test/s4.jpg'],
+            ['file_id' => 8, 'item_id' => 8, 'item_type' => 'good', 'file_url' => '/images/test/s5.jpg'],
+            ['file_id' => 9, 'item_id' => 9, 'item_type' => 'good', 'file_url' => '/images/test/s6.jpg'],
+            ['file_id' => 10, 'item_id' => 10, 'item_type' => 'good', 'file_url' => '/images/test/fanta.jpg'],
+            ['file_id' => 11, 'item_id' => 11, 'item_type' => 'good', 'file_url' => '/images/test/coca-cola.jpg'],
+        ];
+
+        foreach ($file_array as $value) {
+            $file = new File;
+            $file->file_id = $value['file_id'];
+            $file->item_id = $value['item_id'];
+            $file->item_type = $value['item_type'];
+            $file->file_url = $value['file_url'];
+            $file->save();
         }
     }
 }
