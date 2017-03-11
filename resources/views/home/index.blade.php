@@ -4,24 +4,18 @@
     @parent
     <!-- Добавлять css тут -->
     <link href="/css/styles.css" type="text/css" rel="stylesheet">
-	<link href="/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
-    
-    <link href="/css/font-awesome.min.css" type="text/css" rel="stylesheet"> 
 
 @overwrite
 
 @section('js')
     @parent
     <!-- Добавлять js тут -->
-    <script type="text/javascript" src="/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
 
 @overwrite
 
 @section("content")
 <!--Navigation-->
-	<nav class="navbar navbar-default" role="navigation">
+	<nav id="menu" class="default navbar navbar-default" role="navigation">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -103,6 +97,15 @@
 				  </a>
 				</div>
 			</div>
+			<h1 class="s">aaaaa</h1>
+			<h1 class="s">aaaaa</h1>
+			<h1 class="s">aaaaa</h1>
+			<h1 class="s">aaaaa</h1>
+			<h1 class="s">aaaaa</h1>
+			<h1 class="s">aaaaa</h1>
+			<h1 class="s">aaaaa</h1>
+			<h1 class="s">aaaaa</h1>
+			<h1 class="s">aaaaa</h1>
 
 	    </div>
 	</div>
