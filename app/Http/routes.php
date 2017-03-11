@@ -12,3 +12,5 @@
 */
 
 Route::get('/', ['uses' => 'HomeController@index' ] );
+
+Route::resource('categorie','CategorieController');
