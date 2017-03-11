@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Categorie;
 use App\Good;
 use App\Order;
+use App\File;
 
 class DatabaseSeeder extends Seeder
 {
@@ -68,6 +69,59 @@ class DatabaseSeeder extends Seeder
             $good->good_description = $value['good_description'];
             $good->good_categorie_id = $value['good_categorie_id'];
             $good->save();
+        }
+
+        foreach (Order::all() as $value) {
+            $value->delete();
+        }
+
+        $order_array = [
+            ['order_id' => 1, 'order_amount' => '1233' , 'order_client_name' => 'Oleg', 'order_client_phone' => '+79787676543','order_client_address' => 'Sevastopol','order_comment' => 'lorem ipsum','good' => [1,4,5]],
+            ['order_id' => 2, 'order_amount' => '233' , 'order_client_name' => 'Vasia', 'order_client_phone' => '+79787676543','order_client_address' => 'Sevastopol','order_comment' => 'lorem ipsum','good' => [2,5,8]],
+            ['order_id' => 3, 'order_amount' => '444' , 'order_client_name' => 'Serega', 'order_client_phone' => '+79787676543','order_client_address' => 'Sevastopol','order_comment' => 'lorem ipsum','good' => [4,11,9]],
+            ['order_id' => 4, 'order_amount' => '551' , 'order_client_name' => 'Fedor', 'order_client_phone' => '+79787676543','order_client_address' => 'Sevastopol','order_comment' => 'lorem ipsum','good' => [2,6,10]],
+            ['order_id' => 5, 'order_amount' => '2000' , 'order_client_name' => 'Vasil', 'order_client_phone' => '+79787676543','order_client_address' => 'Sevastopol','order_comment' => 'lorem ipsum','good' => [1,11]],
+            ['order_id' => 6, 'order_amount' => '1500' , 'order_client_name' => 'Alex', 'order_client_phone' => '+79787676543','order_client_address' => 'Sevastopol','order_comment' => 'lorem ipsum','good' => [3,4,10]],
+        ];
+
+        foreach ($order_array as $value) {
+            $order = new Order;
+            $order->order_id = $value['order_id'];
+            $order->order_amount = $value['order_amount'];
+            $order->order_client_name = $value['order_client_name'];
+            $order->order_client_phone = $value['order_client_phone'];
+            $order->order_client_address = $value['order_client_address'];
+            $order->order_comment = $value['order_comment'];
+            $order->save();
+
+            $order->goods()->attach($value['good']);
+        }
+
+        foreach (File::all() as $value) {
+            $value->delete();
+        }
+
+        $file_array = [
+            ['file_id' => 1, 'item_id' => 1, 'item_type' => 'good', 'file_url' => '/images/test/p1.jpg'],
+            ['file_id' => 2, 'item_id' => 2, 'item_type' => 'good', 'file_url' => '/images/test/p2.jpg'],
+            ['file_id' => 3, 'item_id' => 3, 'item_type' => 'good', 'file_url' => '/images/test/p3.jpg'],
+            ['file_id' => 4, 'item_id' => 4, 'item_type' => 'good', 'file_url' => '/images/test/s1.jpg'],
+            ['file_id' => 5, 'item_id' => 5, 'item_type' => 'good', 'file_url' => '/images/test/s2.jpg'],
+            ['file_id' => 6, 'item_id' => 6, 'item_type' => 'good', 'file_url' => '/images/test/s3.jpg'],
+            ['file_id' => 7, 'item_id' => 7, 'item_type' => 'good', 'file_url' => '/images/test/s4.jpg'],
+            ['file_id' => 8, 'item_id' => 8, 'item_type' => 'good', 'file_url' => '/images/test/s5.jpg'],
+            ['file_id' => 9, 'item_id' => 9, 'item_type' => 'good', 'file_url' => '/images/test/s6.jpg'],
+            ['file_id' => 10, 'item_id' => 10, 'item_type' => 'good', 'file_url' => '/images/test/fanta.jpg'],
+            ['file_id' => 11, 'item_id' => 11, 'item_type' => 'good', 'file_url' => '/images/test/coca-cola.jpg'],
+        ];
+
+        foreach ($file_array as $value) {
+            $file = new File;
+            $file->file_id = $value['file_id'];
+            $file->item_id = $value['item_id'];
+            $file->item_type = $value['item_type'];
+            $file->file_url = $value['file_url'];
+            $file->save();
         }
     }
 }
