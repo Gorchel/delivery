@@ -8,7 +8,7 @@
     <link href="/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
     <link href="/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"> 
     <link href="/css/styles.css" type="text/css" rel="stylesheet">
-
+    <link href="/css/home/modal_item.css" type="text/css" rel="stylesheet">
 
 	<title>Доставка</title>
 	

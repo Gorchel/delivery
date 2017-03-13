@@ -44,12 +44,9 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div id="navig" class="collapse navbar-collapse" aria-expanded="false">
 				<ul class="nav navbar-nav">
-					<li class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="#">Link</a></li>
-					<li class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="#">Link</a></li>
-					<li class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="#">Link</a></li>
-					<li class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="#">Link</a></li>
-					<li class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="#" >Link</a></li>
-					<li class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="#">Link</a></li>
+               		@foreach($categories as $categorie)
+					<li class="col-xs-12 col-sm-2 col-md-2 col-lg-2" id="{{$categorie->categorie_name}}"> <a href="#">{{$categorie->categorie_name}}</a></li>
+					@endforeach
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div>
@@ -58,6 +55,7 @@
 
 	<div class="container">
 	    <div class="content">
+	    	<!--Main slider-->
 	    	<div class="slider hidden-xs hidden-sm">
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				  <!-- Indicators -->
@@ -98,16 +96,95 @@
 				  </a>
 				</div>
 			</div>
-			<h1 class="s">aaaaa</h1>
-			<h1 class="s">aaaaa</h1>
-			<h1 class="s">aaaaa</h1>
-			<h1 class="s">aaaaa</h1>
-			<h1 class="s">aaaaa</h1>
-			<h1 class="s">aaaaa</h1>
-			<h1 class="s">aaaaa</h1>
-			<h1 class="s">aaaaa</h1>
-			<h1 class="s">aaaaa</h1>
+			<!--Products menu-->
+			<div class="products">
+				@foreach($categories as $categorie)
+					<div id="{{$categorie->categorie_name}}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="shapka_tovarov">
+							<h1>{{$categorie->categorie_name}}</h1>	
+						</div>
+						@foreach($categorie->goods as $good)	
+							<div class="item col-xs-12 col-sm-4 col-md-3 col-lg-3">
+								<div class="item_img">
+									<img src="" alt="" class="item_wrapper">
+								</div>
+								<div class="item_content">
+									<div class="item_title">
+										<a href="#" data-toggle="modal" data-target="#item_modal">
+											<h2>{{$good->good_name}}</h2>		
+										</a>
+									</div>
+									<div class="item_description">
+										<p>Состав товара:{{$good->good_description}}</p>
+										<span class="item_weight">{{$good->good_weight}}</span>
+										<span class="item_price">{{$good->good_price}}</span>
+									</div>
+									<hr>
+									<button type="button" class="bnt_reserv btn btn-primary btn-lg">Заказать</button>						
+								</div>
+							</div>
+						@endforeach
+					</div>
+				@endforeach
+			</div>		
+
+
+			<!--Item_modal -->
+			<div class="modal fade"  id="item_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal_item modal-dialog" role="document">
+					<div class="modal-content" >
+						<div class="modal-body">
+						<!--Modal detail slider-->
+							<div class="modal_item_gallery col-md-6 col-lg-6 ">
+								<div id="modal_carousel" class="carousel slide" data-ride="carousel">
+									<div class="carousel-inner">
+										<div class="item active">
+											<img class="slides" src="/images/slides/slide1.jpg">
+										</div>
+										<div class="item">
+											<img class="slides" src="/images/slides/slide2.jpg">
+										</div>
+										<div class="item">
+											<img class="slides" src="/images/slides/slide3.jpeg">
+										</div>
+									</div>
+									<!-- Controls -->
+									<a class="left carousel-control" href="#modal_carousel" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left"></span>
+									</a>
+									<a class="right carousel-control" href="#modal_carousel" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right"></span>
+									</a>
+								</div>				
+								<div class="modal_other_slides">
+									<span data-target="#modal_carousel" data-slide-to="0" class="active">
+										<img  class="modal_slide_example" src="/images/slides/slide1.jpg">
+									</span>
+									<span data-target="#modal_carousel" data-slide-to="1">
+										<img class="modal_slide_example" src="/images/slides/slide2.jpg">
+									</span>
+									<span data-target="#modal_carousel" data-slide-to="2">
+										<img class="modal_slide_example" src="/images/slides/slide3.jpeg">			
+									</span>				
+								</div>
+							</div>
+							<div class="modal_item_description col-md-6 col-lg-6">
+								<div class="modal_about_item">
+									<h1>{{$good->good_name}}<h1>
+								</div>
+								<div class="modal_reserv">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+
 
 	    </div>
 	</div>
+
+
+
 @overwrite

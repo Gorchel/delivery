@@ -5,6 +5,9 @@ use App\Categorie;
 use App\Good;
 use App\Order;
 use App\File;
+use App\User;
+use App\Role;
+
 
 class DatabaseSeeder extends Seeder
 {
