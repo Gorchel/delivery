@@ -14,3 +14,8 @@
 Route::get('/', ['uses' => 'HomeController@index' ] );
 
 Route::resource('categorie','CategorieController');
+
+
+//Admin routes
+
+Route::get('/admin_panel', ['uses' => 'AdminController@index' ] );
